@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/css/style.css' />
+  <title>Add an Order</title>
+</head>
+<body>
+	<h2>Add Your Order</h2>
+<form action="/orders" method="POST">
+  <label>Tracking Number:
+   <input type="text" name="Tracking">
+  </label>
+  <label>Address:
+   <input type="text" name="Address">
+  </label>
+  <label>Carrier:
+   <select name="carrier">
+   <option value="FedEx">FedEx</option>
+   <option value="UPS">UPS</option>
+   <option value="USPS">USPS</option>
+   <option value="OTHER">OTHER</option>
+   </select>
+  </label>
+  <label>Vendor:
+   <input type="text" name="vendor">
+  </label>
+  <label>Description
+   <input type="text" name="Item Description">
+  </label>
+  <input type="submit" value="Add Package">
+</form>
+</body>
+</html>
