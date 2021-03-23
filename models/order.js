@@ -5,8 +5,11 @@ const Schema = mongoose.Schema;
 //Schema defining individual order properties 
 const orderSchema = new Schema({
     trackingNum : String,
-    address : String,
+
+//Unsure if drop-down considered data-type
+    // address : String,
     carrier : String,
+
     vendor: String,
     itemDescription : String,
 });

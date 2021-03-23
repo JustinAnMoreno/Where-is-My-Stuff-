@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Packages</title>
+</head>
+<body>
+    <h1>My Packages</h1>
+    <a href="/orders/new">Add Another Order</a>
+    <ol>
+        <% orders.forEach(function(order) { %>
+            <li>
+              Tracking Number:  <%=order.trackingNum%> 
+              Shipped by:  <%=order.carrier%>
+              Ordered From: <%=order.vendor%>
+              Order Description: <%=order.itemDescription%>
+            </li>
+       <% }) %>
+    </ol>
+</body>
+</html>
