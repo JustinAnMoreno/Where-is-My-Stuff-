@@ -19,7 +19,7 @@ function index(req, res) {
 }
 
 function deleteOrder(req, res) {
-  Order.findById({ _id: req.params.id }).exec(function (
+  Order.findByIdAndDelete(req.params.id ).exec(function (
     err,
     order
   ) {});

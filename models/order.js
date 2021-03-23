@@ -22,28 +22,8 @@ const orderSchema = new Schema({
   },
 });
 
-// // Here's our latest function for this module
-// function getOne(id) {
-//   return todos[id];
-// }
-
-// function create(todo) {
-//   todos.push(todo);
-// }
-
-// function deleteOne(id) {
-//   todos.splice(id, 1);
-// }
-
-// function updateOne(id, updatedTodo) {
-//   todos.splice(id, 1, updatedTodo);
-// }
 
 //Compile schema into a model and export it
 (module.exports = mongoose.model("Orders", orderSchema)),
   {
-    // getOne,
-    // create,
-    // deleteOne,
-    // updateOne,
   };
