@@ -4,6 +4,7 @@ const ordersCtrl = require('../controllers/orders');
 
 // GET /movies/new
 router.get('/', ordersCtrl.index);
+router.delete('/:id', ordersCtrl.delete);
 router.get('/new', ordersCtrl.new);
 router.post('/', ordersCtrl.create);
 
