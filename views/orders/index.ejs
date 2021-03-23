@@ -24,7 +24,7 @@
           <td><%=order.vendor%></td>
           <td><%=order.itemDescription%></td>
           <td>
-            <form action="/orders/<%= idx%>?_method=DELETE" method="post">
+            <form action="/orders/<%= idx%>?_method=delete" method="post">
               <button type="submit">Remove My Order</button>
             </form>
           </td>
