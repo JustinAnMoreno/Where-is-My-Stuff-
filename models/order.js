@@ -20,10 +20,11 @@ const orderSchema = new Schema({
     type: String,
     required: true,
   },
+  dateOrdered: {
+    type: Date,
+    required: true
+  }
 });
 
-
 //Compile schema into a model and export it
-(module.exports = mongoose.model("Orders", orderSchema)),
-  {
-  };
+(module.exports = mongoose.model("Orders", orderSchema)), {};

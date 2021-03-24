@@ -16,6 +16,7 @@
         <th>Shipped by:</th>
         <th>Ordered From:</th>
         <th>Order Description:</th>
+        <th>Ordered On:</th>
       </thead>
       <tbody>
         <tr>
@@ -23,6 +24,8 @@
           <td><%=order.carrier%></td>
           <td><%=order.vendor%></td>
           <td><%=order.itemDescription%></td>
+          <td><% order.dateOrdered(function(p) { %><%= p.dateOrdered.toLocaleDateString() %></td>
+            <% }); %></td>
           <td>
             <form action="/orders/<%= order._id%>?_method=DELETE" method="post">
               <button type="submit">Remove My Order</button>
@@ -31,7 +34,6 @@
         </tr>
       </tbody>
     </table>
-        <% }) %>
-      
+    <% }) %>
   </body>
 </html>

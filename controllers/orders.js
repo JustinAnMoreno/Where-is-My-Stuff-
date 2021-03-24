@@ -19,10 +19,7 @@ function index(req, res) {
 }
 
 function deleteOrder(req, res) {
-  Order.findByIdAndDelete(req.params.id ).exec(function (
-    err,
-    order
-  ) {});
+  Order.findByIdAndDelete(req.params.id).exec(function (err, order) {});
   res.redirect("/orders");
 }
 

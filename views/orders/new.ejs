@@ -26,7 +26,7 @@
           <option value="" selected disabled hidden>Choose here</option>
           <!--  -->
 
-          <option value="Fedex">FedEx</option>
+          <option value="FedEx">FedEx</option>
           <option value="UPS">UPS</option>
           <option value="USPS">USPS</option>
           <option value="Other">Other</option>
@@ -37,8 +37,11 @@
         <input type="text" name="vendor" />
       </label>
       <label
-        >Description
+        >Description:
         <input type="text" name="itemDescription" />
+      </label>
+      
+      <label>Date Ordered:<input type="date" name="dateOrdered" />
       </label>
       <input type="submit" value="addPackage" />
     </form>
