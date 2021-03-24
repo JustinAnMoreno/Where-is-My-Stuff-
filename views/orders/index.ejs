@@ -24,8 +24,8 @@
           <td><%=order.carrier%></td>
           <td><%=order.vendor%></td>
           <td><%=order.itemDescription%></td>
-          <td><% order.dateOrdered(function(p) { %><%= p.dateOrdered.toLocaleDateString() %></td>
-            <% }); %></td>
+          <td><%=order.dateOrdered %></td>
+           
           <td>
             <form action="/orders/<%= order._id%>?_method=DELETE" method="post">
               <button type="submit">Remove My Order</button>
