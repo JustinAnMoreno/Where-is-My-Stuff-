@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Add an Order</title>
+  </head>
+  <body>
+    <h2>Add Your Order</h2>
+    <form action="/orders" method="post" id="add-order-form">
+      <label
+        >Tracking Number:
+        <input type="text" name="trackingNum" value="<%=order.trackingNum%>" />
+      </label>
+
+      <!-- <label>Address:
+   <input type="text" name="address">
+  </label> -->
+
+      <label>Carrier:
+        <!-- Adds default value to drop-down/resets to default value on refresh -->
+        <select autocomplete="off" name="carrier">
+          <option value="<%=order.carrier%>" selected disabled hidden><%=order.carrier%></option>
+          <!--  -->
+
+          <option value="FedEx">FedEx</option>
+          <option value="UPS">UPS</option>
+          <option value="USPS">USPS</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+      <label
+        >Vendor:
+        <input type="text" name="vendor" value="<%=order.vendor%>" />
+      </label>
+      <label
+        >Description:
+        <input type="text" name="itemDescription" value="<%=order.itemDescription%>" />
+      </label>
+
+      <label>Date Ordered:<input type="date" name="dateOrdered" value="<%order.dateOrdered%>" /> </label>
+      <input type="submit" value="addPackage" />
+    </form>
+  </body>
+</html>

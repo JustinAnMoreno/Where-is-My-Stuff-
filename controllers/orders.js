@@ -33,8 +33,16 @@ function show(req, res) {
 }
   )};
 
+function edit(req, res) {
+  Order.findById(req.params.id, function(err, order){
+    res.render("orders/edit", { order })
+  })
+}  
+
 function update(req, res) {
-  Order
+  Order.findByIdAndUpdate(req.params.id, req.body, function(err, order){
+    res.render("orders/show", { order })
+  })
 }
 
 module.exports = {
@@ -43,4 +51,6 @@ module.exports = {
   index,
   delete: deleteOrder,
   show,
+  update,
+  edit,
 };
