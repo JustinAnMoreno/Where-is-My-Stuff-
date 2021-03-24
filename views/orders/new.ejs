@@ -9,7 +9,7 @@
   </head>
   <body>
     <h2>Add Your Order</h2>
-    <form action="/orders" method="post">
+    <form action="/orders" method="post" id="add-order-form">
       <label
         >Tracking Number:
         <input type="text" name="trackingNum" />
@@ -19,8 +19,7 @@
    <input type="text" name="address">
   </label> -->
 
-      <label
-        >Carrier:
+      <label>Carrier:
         <!-- Adds default value to drop-down/resets to default value on refresh -->
         <select autocomplete="off" name="carrier">
           <option value="" selected disabled hidden>Choose here</option>
@@ -40,9 +39,8 @@
         >Description:
         <input type="text" name="itemDescription" />
       </label>
-      
-      <label>Date Ordered:<input type="date" name="dateOrdered" />
-      </label>
+
+      <label>Date Ordered:<input type="date" name="dateOrdered" /> </label>
       <input type="submit" value="addPackage" />
     </form>
   </body>

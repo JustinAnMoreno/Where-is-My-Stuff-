@@ -23,7 +23,11 @@ const orderSchema = new Schema({
   dateOrdered: {
     type: Date,
     required: true
-  }
+  },
+  delivered: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 //Compile schema into a model and export it
