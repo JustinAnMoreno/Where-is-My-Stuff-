@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>All Packages</title>
   </head>
   <body>
@@ -15,14 +16,12 @@
         <th>Tracking Number:</th>
         <th>Shipped By:</th>
         <th>Ordered On:</th>
-        <th>Delivered:</th>
       </thead>
       <tbody>
         <tr>
           <td><%=order.trackingNum%></td>
           <td><%=order.carrier%></td>
           <td><%=order.dateOrdered.toLocaleDateString()%></td>
-          <td><%=order.delivered ? 'Yes' : 'No' %></td>
           <td><a href="/orders/<%=order._id%>">Details</a></td>
           <td>
             <form action="/orders/<%= order._id%>?_method=DELETE" method="post">

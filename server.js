@@ -1,9 +1,8 @@
 // Require modules
 const express = require("express");
 const morgan = require("morgan");
-const port = 3000;
-const methodOverride = require("method-override");
-
+const port = process.env.PORT || '3000';const methodOverride = require("method-override");
+const session = require('express-session');
 const indexRouter = require("./routes/index");
 const ordersRouter = require("./routes/orders");
 
@@ -25,6 +24,29 @@ app.use(methodOverride("_method"));
 // Mount routes with app.use()
 app.use("/", indexRouter);
 app.use("/orders", ordersRouter);
+app.use(session({
+  secret: 'supersecret',
+  resave: false,
+  saveUninitialized: false
+}));
+
+
+////////// Express Session Playground //////////
+
+app.get('/first-route', function(req, res) { // any route will work
+  req.session.favFood = 'pizza';
+  res.send(req.session);
+});
+
+
+
+
+////////////////////////////////////////////////
+
+
+// Mount routes with app.use()
+app.use('/', indexRouter);
+
 
 // Tell App to listen
 app.listen(port, function () {
