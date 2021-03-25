@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Add an Order</title>
+    <title>Edit Order</title>
   </head>
   <body>
-    <h2>Add Your Order</h2>
-    <form action="/orders" method="post" id="add-order-form">
+    <h2>Edit Order</h2>
+    <form action="/orders/<%= order._id%>?_method=PUT" method="post">
       <label
         >Tracking Number:
         <input type="text" name="trackingNum" value="<%=order.trackingNum%>" />
@@ -41,7 +41,11 @@
       </label>
 
       <label>Date Ordered:<input type="date" name="dateOrdered" value="<%order.dateOrdered%>" /> </label>
-      <input type="submit" value="addPackage" />
+
+      <label>Delivered?<input type="checkbox" name="delivered" value="<%order.delivered%>"/></label>
+
+      <input type="submit" value="update order" />
+      
     </form>
   </body>
 </html>

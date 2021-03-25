@@ -17,7 +17,6 @@
         <th>Ordered From:</th>
         <th>Order Description:</th>
         <th>Ordered On:</th>
-        <th>Delivered?</th>
         <th></th>
       </thead>
       <tbody>
@@ -27,7 +26,7 @@
           <td><%=order.vendor%></td>
           <td><%=order.itemDescription%></td>
           <td><%=order.dateOrdered.toLocaleDateString()%></td>
-          <td><input type="checkbox" name="delivered" checked /></td>
+
           <a href="/orders/<%=order._id%>/edit">Edit</a>
           <td>
             <form action="/orders/<%= order._id%>?_method=DELETE" method="post">
