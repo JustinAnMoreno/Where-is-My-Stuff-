@@ -28,3 +28,6 @@ nav > img {
   object-fit: contain;
   margin-right: auto;
 }
+body{
+  background-color: antiquewhite;
+}
