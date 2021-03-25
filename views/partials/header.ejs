@@ -11,9 +11,14 @@
   <nav>
     <img src="/images/delivery.png">
     <h1>On the Way!</h1>
+    <a href="/users/signin" <%- title === 'Sign In' ? 'class="active"' : '' %>>Sign In</a>
+
+    <a href="/users/new" <%- title === 'Sign Up' ? 'class="active"' : '' %>>Sign Up</a>
+
     <a href="/orders/new" <%- title === 'Add Order' ? 'class="active"' : '' %>>ADD Order</a>
+
     <a href="/orders" <%- title === 'All Orders' ? 'class="active"' : '' %>>ALL MOVIES</a>
   </nav>
 
-  <main>
-    <h1><%= title %></h1>
+  
+    

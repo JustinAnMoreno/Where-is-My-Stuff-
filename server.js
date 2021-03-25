@@ -2,6 +2,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const port = process.env.PORT || '3000';const methodOverride = require("method-override");
+const usersRouter = require('./routes/users');
 const session = require('express-session');
 const indexRouter = require("./routes/index");
 const ordersRouter = require("./routes/orders");
@@ -24,6 +25,7 @@ app.use(methodOverride("_method"));
 // Mount routes with app.use()
 app.use("/", indexRouter);
 app.use("/orders", ordersRouter);
+app.use('/users', usersRouter);
 app.use(session({
   secret: 'supersecret',
   resave: false,

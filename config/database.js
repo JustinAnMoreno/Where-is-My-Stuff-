@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  process.env.DATABASE_URL,
+  "mongodb+srv://Admin:idunno123@sei.fuetz.mongodb.net/whatscoming?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -16,3 +16,5 @@ db.on("connected", function () {
   console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
 });
 
+
+// process.env.DATABASEURL,
